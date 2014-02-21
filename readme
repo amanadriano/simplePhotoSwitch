@@ -1,0 +1,41 @@
+created by aman adriano
+on 2/14/2013 @ robinson's palawan
+
+how to use :
+** include jquery first then SimplePhotoSwitch.js
+** follow instruction below
+
+<div id='divContainer'></div>
+
+	<script type="text/javascript">
+		$(function() {
+			var sps = new SimplePhotoSwitch();
+			sps.init({
+				container : '#divContainer',
+				width : 600,	//width of image
+				height : 450,	//height of image
+				speedSwitch : 5000,	//length of time before next photo ... in milliseconds
+				speedFade : 800,	//duration of fade animation in jquery
+				dir : '',	//directory of photos e.g. 'myphotos/'
+				photos : []	//list of photos to be found on the directory given above e.g.('filename.jpg','filename2.jpg')
+			});
+		});
+	</script>
+
+
+
+=================================NEW VERSION=\======================================
+$(function() {
+			var sps = new SimplePhotoSwitch();
+			sps.init({
+				container : '#divContainer',
+				width : 450,	//width of image
+				height : 300,	//height of image
+				speedSwitch : 5000,	//length of time before next photo ... in milliseconds
+				speedFade : 800,	//duration of fade animation in jquery
+				dir : '',	//directory of photos e.g. 'myphotos/'
+				photos : []	//list of photos to be found on the directory given above e.g.'filename.jpg','filename2.jpg'
+				,labels : [] //label for each photos. e.g. 'First photo', 'second photo'
+				,labelCSS : "padding: 10px 5px; font-size: 12px; color: #ffffff; background: #000000; z-index: 10; position: relative; width: 440px; top: 265px; opacity: 0.75; text-align: center;"
+			});
+		});
